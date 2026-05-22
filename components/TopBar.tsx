@@ -12,8 +12,8 @@
 
 // const contacts = [
 //   {
-//     label: "+91 98765 43210",
-//     href: "tel:+919876543210",
+//     label: "6309635637",
+//     href: "tel:+6309635637",
 //     icon: Phone,
 //   },
 //   {
@@ -26,7 +26,7 @@
 // const socials = [
 //   {
 //     label: "WhatsApp",
-//     href: "https://wa.me/919876543210",
+//     href: "https://wa.me/6309635637",
 //     icon: MessageSquare,
 //   },
 //   {

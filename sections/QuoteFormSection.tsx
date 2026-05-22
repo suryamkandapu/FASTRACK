@@ -16,9 +16,31 @@ export function QuoteFormSection() {
   const [drop, setDrop] = useState("");
   const [cargo, setCargo] = useState("");
   const [truckType, setTruckType] = useState("");
+  const [errors, setErrors] = useState<{
+    pickup?: string;
+    drop?: string;
+    cargo?: string;
+    truckType?: string;
+  }>({});
+
+  const validateFields = () => {
+    const nextErrors: typeof errors = {};
+
+    if (!pickup.trim()) nextErrors.pickup = "Pickup location is required.";
+    if (!drop.trim()) nextErrors.drop = "Drop location is required.";
+    if (!cargo.trim()) nextErrors.cargo = "Cargo type is required.";
+    if (!truckType.trim()) nextErrors.truckType = "Truck type is required.";
+
+    setErrors(nextErrors);
+    return Object.keys(nextErrors).length === 0;
+  };
 
   const handleWhatsApp = () => {
-    const phoneNumber = "919876543210";
+    if (!validateFields()) {
+      return;
+    }
+
+    const phoneNumber = "6309635637";
 
     const message = `
 🚚 FASTTRACK LOGISTICS QUOTE REQUEST
@@ -30,7 +52,7 @@ export function QuoteFormSection() {
 
 🚛 Truck Type: ${truckType}
 
-Please share the pricing details.
+Please share pricing details and availability.
     `;
 
     const encodedMessage = encodeURIComponent(message);
@@ -46,8 +68,20 @@ Please share the pricing details.
       whileInView="onscreen"
       viewport={{ once: true, amount: 0.3 }}
       variants={fadeIn}
-      className="container relative -mt-10 mb-10 rounded-[1.5rem] bg-white/95 px-4 py-5 shadow-luxury backdrop-blur-xl md:px-6 md:py-6"
+      className="container relative -mt-10 mb-10 rounded-[1.5rem] bg-white/95 px-4 py-6 shadow-luxury backdrop-blur-xl md:px-8 md:py-8"
     >
+      <div className="mb-8 rounded-[1.5rem] border border-[#ecd7c7] bg-[#fffaf4] p-5 shadow-sm sm:p-6">
+        <p className="text-xs uppercase tracking-[0.32em] text-[#7a3e1d]/90">
+          Premium estimate
+        </p>
+        <h2 className="mt-3 text-3xl font-black uppercase tracking-[-0.04em] text-[#1f1f1f] sm:text-4xl">
+          Get Instant Transport Quote
+        </h2>
+        <p className="mt-3 max-w-2xl text-sm leading-6 text-[#6b6b6b] sm:text-base">
+          Share your pickup, drop and cargo details, and receive a premium pricing estimate tailored to your shipment.
+        </p>
+      </div>
+
       <div className="grid gap-4 lg:grid-cols-[1.7fr_0.9fr]">
 
         {/* LEFT SIDE */}
@@ -66,10 +100,19 @@ Please share the pricing details.
                 type="text"
                 placeholder="Mumbai"
                 value={pickup}
-                onChange={(e) => setPickup(e.target.value)}
+                onChange={(e) => {
+                  setPickup(e.target.value);
+                  if (errors.pickup) {
+                    setErrors((prev) => ({ ...prev, pickup: undefined }));
+                  }
+                }}
+                aria-invalid={Boolean(errors.pickup)}
                 className="w-full border-0 bg-transparent text-sm text-[#1f1f1f] outline-none"
               />
             </div>
+            {errors.pickup ? (
+              <p className="mt-2 text-[11px] text-[#c12828]">{errors.pickup}</p>
+            ) : null}
           </label>
 
           {/* DROP */}
@@ -85,10 +128,19 @@ Please share the pricing details.
                 type="text"
                 placeholder="New Delhi"
                 value={drop}
-                onChange={(e) => setDrop(e.target.value)}
+                onChange={(e) => {
+                  setDrop(e.target.value);
+                  if (errors.drop) {
+                    setErrors((prev) => ({ ...prev, drop: undefined }));
+                  }
+                }}
+                aria-invalid={Boolean(errors.drop)}
                 className="w-full border-0 bg-transparent text-sm text-[#1f1f1f] outline-none"
               />
             </div>
+            {errors.drop ? (
+              <p className="mt-2 text-[11px] text-[#c12828]">{errors.drop}</p>
+            ) : null}
           </label>
 
           {/* CARGO */}
@@ -104,10 +156,19 @@ Please share the pricing details.
                 type="text"
                 placeholder="Electronics"
                 value={cargo}
-                onChange={(e) => setCargo(e.target.value)}
+                onChange={(e) => {
+                  setCargo(e.target.value);
+                  if (errors.cargo) {
+                    setErrors((prev) => ({ ...prev, cargo: undefined }));
+                  }
+                }}
+                aria-invalid={Boolean(errors.cargo)}
                 className="w-full border-0 bg-transparent text-sm text-[#1f1f1f] outline-none"
               />
             </div>
+            {errors.cargo ? (
+              <p className="mt-2 text-[11px] text-[#c12828]">{errors.cargo}</p>
+            ) : null}
           </label>
 
           {/* TRUCK */}
@@ -123,10 +184,19 @@ Please share the pricing details.
                 type="text"
                 placeholder="Tanker"
                 value={truckType}
-                onChange={(e) => setTruckType(e.target.value)}
+                onChange={(e) => {
+                  setTruckType(e.target.value);
+                  if (errors.truckType) {
+                    setErrors((prev) => ({ ...prev, truckType: undefined }));
+                  }
+                }}
+                aria-invalid={Boolean(errors.truckType)}
                 className="w-full border-0 bg-transparent text-sm text-[#1f1f1f] outline-none"
               />
             </div>
+            {errors.truckType ? (
+              <p className="mt-2 text-[11px] text-[#c12828]">{errors.truckType}</p>
+            ) : null}
           </label>
         </div>
 

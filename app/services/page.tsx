@@ -1,11 +1,8 @@
-import Link from "next/link";
-
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { PageTransition } from "@/components/PageTransition";
 import { Button } from "@/components/Button";
-
-import { servicesData } from "@/lib/data";
+import { ServicesSection } from "@/sections/ServicesSection";
 
 export default function ServicesPage() {
   return (
@@ -24,41 +21,12 @@ export default function ServicesPage() {
           </h1>
 
           <p className="mx-auto mt-6 max-w-2xl text-sm leading-7 text-[#d9c9b9] md:text-base md:leading-8">
-            Select from our dedicated transport offerings and
-            experience premium logistics built for modern
-            businesses and nationwide delivery operations.
+            Select from our dedicated transport offerings and connect instantly on WhatsApp for a premium, tailored logistics quote.
           </p>
         </div>
       </section>
 
-      {/* SERVICES */}
-      <section className="container mx-auto grid gap-6 px-4 py-14 md:grid-cols-3 md:py-20">
-        {servicesData.map((service) => (
-          <div
-            key={service.title}
-            className="rounded-[2rem] border border-[#e6d8c8] bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
-          >
-            <div className="flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-br from-[#f5eee8] to-[#ecd7c7] text-2xl shadow-sm">
-              {service.icon}
-            </div>
-
-            <h2 className="mt-5 text-2xl font-semibold text-[#1f1f1f]">
-              {service.title}
-            </h2>
-
-            <p className="mt-3 text-sm leading-7 text-[#6b6b6b]">
-              {service.description}
-            </p>
-
-            <Link
-              href={service.href}
-              className="mt-6 inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.24em] text-[#7a3e1d]"
-            >
-              VIEW SERVICE
-            </Link>
-          </div>
-        ))}
-      </section>
+      <ServicesSection />
 
       {/* CTA */}
       <div className="container mx-auto px-4 pb-20 text-center">

@@ -2,20 +2,22 @@ export const servicesData = [
   {
     title: "Full Truck Load",
     description: "Dedicated freight capacity across India for large, time-critical shipments.",
-    href: "/services/full-truck-load",
     icon: "🚚"
   },
   {
-    title: "Part Load Services",
+    title: "Part Load",
     description: "Flexible shared transport optimized for smaller consignments and cost efficiency.",
-    href: "/services/part-load",
     icon: "📦"
   },
   {
     title: "Goods Transport",
     description: "Comprehensive national freight solutions for every cargo type and category.",
-    href: "/services/goods-transport",
     icon: "🛣️"
+  },
+  {
+    title: "Packers & Movers",
+    description: "Professional packers and movers for home and office relocation with premium care and seamless transit.",
+    icon: "🧳"
   }
 ];
 

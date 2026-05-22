@@ -11,7 +11,13 @@ export  function ServicesSection() {
     <section id="services" className="py-24">
       <div className="container mx-auto">
         <SectionHeading eyebrow="OUR SERVICES" title="WHAT WE OFFER" description="Premium logistics services designed for modern enterprises and trusted supply chains." />
-        <motion.div initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.3 }} variants={staggerIn} className="grid gap-6 md:grid-cols-3">
+        <motion.div
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={staggerIn}
+          className="grid gap-4 grid-cols-2 lg:grid-cols-4"
+        >
           {servicesData.map((service) => (
             <motion.div key={service.title} variants={fadeInUp}>
               <ServiceCard {...service} />

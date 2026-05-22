@@ -110,7 +110,7 @@ export function StatsContactSection() {
 
             {/* CALL CARD */}
             <a
-              href="tel:+919876543210"
+              href="tel:+6309635637"
               className="group flex items-center justify-between rounded-[1.2rem] border border-[#ead9cb] bg-[#faf6f1] p-4 transition hover:border-[#7a3e1d] hover:bg-[#fff]"
             >
               <div className="flex items-center gap-4">
@@ -125,7 +125,7 @@ export function StatsContactSection() {
                   </p>
 
                   <h4 className="mt-1 text-[18px] font-semibold text-[#1f1f1f]">
-                    +91 98765 43210
+                    6309635637
                   </h4>
 
                   <p className="mt-1 text-[12px] text-[#6b6b6b]">

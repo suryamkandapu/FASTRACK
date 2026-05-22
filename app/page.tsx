@@ -15,9 +15,10 @@ export default function Home() {
       {/* <TopBar /> */}
       <Navbar />
       <HeroSection />
-      <QuoteFormSection />
+      
       <main className="space-y-28">
         <ServicesSection />
+        <QuoteFormSection />
         <AboutSection />
        
         <StatsContactSection />

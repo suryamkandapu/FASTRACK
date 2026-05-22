@@ -9,9 +9,9 @@ const quickLinks = [
 ];
 
 const services = [
-  { label: "Full Truck Load", href: "/services/full-truck-load" },
-  { label: "Part Load", href: "/services/part-load" },
-  { label: "Goods Transport", href: "/services/goods-transport" }
+  { label: "Full Truck Load", href: "/services" },
+  { label: "Part Load", href: "/services" },
+  { label: "Goods Transport", href: "/services" }
 ];
 
 export function Footer() {
@@ -23,7 +23,9 @@ export function Footer() {
           <p className="text-sm leading-7 text-[#c9b5a8]">Luxury logistics across India with premium fleet solutions and elegant cargo experiences.</p>
           <div className="flex items-center gap-3 text-sm text-[#c9b5a8]">
             <Phone className="h-4 w-4" />
-            <span>+91 98765 43210</span>
+            <a href="tel:+6309635637" className="transition hover:text-white">
+              6309635637
+            </a>
           </div>
           <div className="flex items-center gap-3 text-sm text-[#c9b5a8]">
             <Mail className="h-4 w-4" />
