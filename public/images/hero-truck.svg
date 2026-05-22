@@ -1,0 +1,28 @@
+<svg width="1200" height="760" viewBox="0 0 1200 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="760" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2A100A" />
+      <stop offset="1" stop-color="#5A2C18" />
+    </linearGradient>
+    <linearGradient id="truckGradient" x1="354" y1="378" x2="846" y2="378" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E7D1BF" />
+      <stop offset="1" stop-color="#7A3E1D" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="760" fill="url(#bg)" />
+  <path d="M180 560H1020L1060 400H220L180 560Z" fill="#311A11" opacity="0.76" />
+  <path d="M220 400H1060L1020 560H260L220 400Z" fill="#4B240F" />
+  <path d="M360 280H980V436H360V280Z" fill="url(#truckGradient)" />
+  <path d="M360 280H620V436H360V280Z" fill="#422216" />
+  <path d="M960 280H980V436H960V280Z" fill="#2D1409" />
+  <rect x="620" y="312" width="220" height="92" rx="20" fill="#3F1E11" />
+  <path d="M414 338H556V384H414V338Z" fill="#DFC1B1" />
+  <circle cx="340" cy="560" r="72" fill="#1F1F1F" />
+  <circle cx="340" cy="560" r="56" fill="#5D3721" />
+  <circle cx="860" cy="560" r="72" fill="#1F1F1F" />
+  <circle cx="860" cy="560" r="56" fill="#5D3721" />
+  <path d="M180 560H260V628H180V560Z" fill="#1F1F1F" />
+  <path d="M980 560H1060V628H980V560Z" fill="#1F1F1F" />
+  <path d="M240 414H980V422H240V414Z" fill="#000" opacity="0.16" />
+  <ellipse cx="750" cy="176" rx="300" ry="132" fill="#FFD9B0" opacity="0.16" />
+</svg>
