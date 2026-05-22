@@ -4,14 +4,12 @@ import { Button } from "@/components/Button";
 import { PageTransition } from "@/components/PageTransition";
 import { Footer } from "@/components/Footer";
 import { Navbar } from "@/components/Navbar";
-import { TopBar } from "@/components/TopBar";
 import { fadeIn, fadeInUp, staggerIn } from "@/lib/animations";
 import { featureGrid } from "@/lib/data";
 
 export default function FullTruckLoadPage() {
   return (
     <PageTransition>
-      <TopBar />
       <Navbar />
       <section className="relative overflow-hidden bg-[#120907] py-24 text-white">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(255,255,255,0.12),_transparent_22%)]" />

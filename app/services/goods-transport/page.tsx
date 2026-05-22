@@ -4,7 +4,6 @@ import { Button } from "@/components/Button";
 import { Footer } from "@/components/Footer";
 import { Navbar } from "@/components/Navbar";
 import { PageTransition } from "@/components/PageTransition";
-import { TopBar } from "@/components/TopBar";
 import { fadeIn, fadeInUp, staggerIn } from "@/lib/animations";
 import { fleetCategories } from "@/lib/data";
 

@@ -2,20 +2,22 @@ import { motion } from "framer-motion";
 import { ChevronRight, Play } from "lucide-react";
 import React from "react";
 
-type BaseButtonProps = {
+type SharedButtonProps = {
   variant?: "primary" | "secondary";
   icon?: "play" | "arrow";
   className?: string;
   children: React.ReactNode;
 };
 
-type ButtonAsButton = BaseButtonProps & React.ButtonHTMLAttributes<HTMLButtonElement> & {
+type ButtonAsButton = SharedButtonProps & {
   as?: "button";
+  onClick?: React.MouseEventHandler<HTMLButtonElement>;
 };
 
-type ButtonAsAnchor = BaseButtonProps & React.AnchorHTMLAttributes<HTMLAnchorElement> & {
+type ButtonAsAnchor = SharedButtonProps & {
   as: "a";
   href: string;
+  onClick?: React.MouseEventHandler<HTMLAnchorElement>;
 };
 
 type ButtonProps = ButtonAsButton | ButtonAsAnchor;
@@ -28,23 +30,27 @@ const variants = {
 const MotionButton = motion.button;
 const MotionAnchor = motion.a;
 
-export function Button({ variant = "primary", icon, children, className = "", as = "button", ...props }: ButtonProps) {
+export function Button(props: ButtonProps) {
+  const { variant = "primary", icon, children, className = "", as = "button", onClick } = props;
+  const href = "href" in props ? props.href : undefined;
+
   return as === "a" ? (
     <MotionAnchor
+      href={href}
+      onClick={onClick as React.MouseEventHandler<HTMLAnchorElement>}
       whileHover={{ scale: 1.02 }}
       whileTap={{ scale: 0.98 }}
       className={`inline-flex items-center justify-center gap-3 rounded-[1.25rem] px-6 py-3 text-sm font-semibold uppercase tracking-[0.14em] transition ${variants[variant]} ${className}`}
-      {...props}
     >
       {children}
       {icon === "play" ? <Play className="h-4 w-4" /> : icon === "arrow" ? <ChevronRight className="h-4 w-4" /> : null}
     </MotionAnchor>
   ) : (
     <MotionButton
+      onClick={onClick as React.MouseEventHandler<HTMLButtonElement>}
       whileHover={{ scale: 1.02 }}
       whileTap={{ scale: 0.98 }}
       className={`inline-flex items-center justify-center gap-3 rounded-[1.25rem] px-6 py-3 text-sm font-semibold uppercase tracking-[0.14em] transition ${variants[variant]} ${className}`}
-      {...props}
     >
       {children}
       {icon === "play" ? <Play className="h-4 w-4" /> : icon === "arrow" ? <ChevronRight className="h-4 w-4" /> : null}

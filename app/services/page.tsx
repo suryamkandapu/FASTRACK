@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { TopBar } from "@/components/TopBar";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { PageTransition } from "@/components/PageTransition";
@@ -9,7 +8,6 @@ import { servicesData } from "@/lib/data";
 export default function ServicesIndexPage() {
   return (
     <PageTransition>
-      <TopBar />
       <Navbar />
       <section className="bg-[#120907] py-24 text-white">
         <div className="container mx-auto text-center">
