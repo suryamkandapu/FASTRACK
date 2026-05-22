@@ -1,3 +1,5 @@
+"use client";
+
 import { motion } from "framer-motion";
 import { ChevronRight, Play } from "lucide-react";
 import React from "react";
@@ -30,7 +32,7 @@ const variants = {
 const MotionButton = motion.button;
 const MotionAnchor = motion.a;
 
-export function Button(props: ButtonProps) {
+export  function Button(props: ButtonProps) {
   const { variant = "primary", icon, children, className = "", as = "button", onClick } = props;
   const href = "href" in props ? props.href : undefined;
 

@@ -3,14 +3,16 @@
 import { motion } from "framer-motion";
 import React from "react";
 
-export function PageTransition({ children }: { children: React.ReactNode }) {
+export function PageTransition({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 18 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -18 }}
-      transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
-      className="relative overflow-hidden"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.4 }}
     >
       {children}
     </motion.div>

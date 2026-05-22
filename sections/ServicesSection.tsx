@@ -6,7 +6,7 @@ import { SectionHeading } from "@/components/SectionHeading";
 import { ServiceCard } from "@/components/ServiceCard";
 import { fadeInUp, staggerIn } from "@/lib/animations";
 
-export function ServicesSection() {
+export  function ServicesSection() {
   return (
     <section id="services" className="py-24">
       <div className="container mx-auto">
