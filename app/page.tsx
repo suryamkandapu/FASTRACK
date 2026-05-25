@@ -12,15 +12,13 @@ import { StatsContactSection } from "@/sections/StatsContactSection";
 export default function Home() {
   return (
     <PageTransition>
-      {/* <TopBar /> */}
       <Navbar />
       <HeroSection />
-      
-      <main className="space-y-28">
+
+      <main className="space-y-10 md:space-y-14">
         <ServicesSection />
         <QuoteFormSection />
         <AboutSection />
-       
         <StatsContactSection />
       </main>
       <Footer />

@@ -1,153 +1,146 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
-import { Button } from "@/components/Button";
-import { fadeInUp } from "@/lib/animations";
-import { Users, Truck, ShieldCheck } from "lucide-react";
+import { useEffect, useState } from "react";
+import { ArrowRight, Headphones, ShieldCheck, Sparkles, Truck, Users } from "lucide-react";
+import { fadeInUp, staggerIn } from "@/lib/animations";
 
-const highlights = [
+const impactItems = [
   {
-    icon: Users,
-    title: "5000+ Clients",
-    subtitle: "Trusted nationwide",
-  },
-  {
-    icon: Truck,
-    title: "100+ Vehicles",
-    subtitle: "Fast delivery fleet",
-  },
-  {
+    title: "14+ Years Experience",
+    subtitle: "Trusted logistics expertise",
+    value: 14,
+    suffix: "+",
     icon: ShieldCheck,
-    title: "Trusted Delivery",
-    subtitle: "Safe cargo handling",
+    accent: "from-[#7a3e1d] to-[#b8683e]",
+  },
+  {
+    title: "5000+ Happy Customers",
+    subtitle: "Serving clients nationwide",
+    value: 5000,
+    suffix: "+",
+    icon: Users,
+    accent: "from-[#9e532c] to-[#ceb091]",
+  },
+  {
+    title: "14000+ Safe Deliveries Completed",
+    subtitle: "Fast and secure transport",
+    value: 14000,
+    suffix: "+",
+    icon: Truck,
+    accent: "from-[#5c2d15] to-[#8f4d22]",
+  },
+  {
+    title: "24/7 Support",
+    subtitle: "Always available for assistance",
+    value: 24,
+    suffix: "/7",
+    icon: Headphones,
+    accent: "from-[#8f4d22] to-[#d79a6a]",
   },
 ];
 
+function AnimatedValue({ value, suffix }: { value: number; suffix: string }) {
+  const [current, setCurrent] = useState(0);
+
+  useEffect(() => {
+    let frame = 0;
+    const duration = 1200;
+    const start = performance.now();
+
+    const animate = (time: number) => {
+      const progress = Math.min((time - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      setCurrent(Math.round(value * eased));
+
+      if (progress < 1) {
+        frame = requestAnimationFrame(animate);
+      }
+    };
+
+    frame = requestAnimationFrame(animate);
+    return () => cancelAnimationFrame(frame);
+  }, [value]);
+
+  return (
+    <span>
+      {current.toLocaleString()}
+      {suffix}
+    </span>
+  );
+}
+
 export function AboutSection() {
   return (
-    <section
-      id="about"
-      className="py-0"
-    >
-      <div className="container mx-auto px-4 space-y-0">
-
-        {/* TOP SECTION */}
+    <section id="impact" className="py-2 sm:py-3">
+      <div className="container mx-auto px-4">
         <motion.div
-          initial="offscreen"
-          whileInView="onscreen"
-          viewport={{ once: true, amount: 0.3 }}
-          variants={fadeInUp}
-          className="mb-3"
+          initial={{ opacity: 0, x: -28 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
+          className="rounded-[2rem] border border-[#ead9cb] bg-[linear-gradient(145deg,rgba(255,255,255,0.98),rgba(250,244,237,0.98))] p-5 shadow-[0_24px_80px_rgba(122,62,29,0.12)] sm:p-7"
         >
-
-          {/* ABOUT TAG */}
-          <div className="mb-4">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.32em] text-[#7a3e1d]">
-              ABOUT US
-            </p>
-
-            <div className="mt-2 h-[2px] w-14 rounded-full bg-[#7a3e1d]" />
-
-            <p className="mt-3 max-w-[680px] text-[14px] leading-7 text-[#6b6b6b] md:text-base">
-              Premium logistics solutions designed for secure,
-              fast and reliable nationwide transport operations.
-            </p>
-          </div>
-
-          {/* HIGHLIGHT CARDS */}
-          <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
-
-            {highlights.map((item) => (
-              <div
-                key={item.title}
-                className="flex items-center gap-3 rounded-2xl border border-[#ead9cb] bg-white p-4 shadow-sm"
-              >
-
-                {/* ICON */}
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#7a3e1d]/10 text-[#7a3e1d]">
-                  <item.icon className="h-5 w-5" />
-                </div>
-
-                {/* TEXT */}
-                <div>
-                  <p className="text-[15px] font-semibold text-[#1f1f1f]">
-                    {item.title}
-                  </p>
-
-                  <p className="text-xs text-[#6b6b6b]">
-                    {item.subtitle}
-                  </p>
-                </div>
-              </div>
-            ))}
-
-          </div>
-        </motion.div>
-
-        {/* IMAGE SECTION */}
-        <motion.div
-          initial="offscreen"
-          whileInView="onscreen"
-          viewport={{ once: true, amount: 0.3 }}
-          variants={fadeInUp}
-          className="relative overflow-hidden rounded-[2rem] shadow-[0_20px_80px_rgba(0,0,0,0.18)]"
-        >
-
-          {/* IMAGE */}
-          <Image
-            src="/images/aboutUs.jpg"
-            alt="Premium truck fleet"
-            width={1600}
-            height={900}
-            className="h-[540px] w-full object-cover object-left md:h-[700px]"
-          />
-
-          {/* OVERLAY */}
-          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/55 to-black/20 md:from-black/75 md:via-black/35" />
-
-          {/* CONTENT */}
-          <div className="absolute inset-0 flex items-end md:items-center justify-start md:justify-end px-5 py-7 sm:px-8 md:px-14 lg:px-20">
-
-            <div className="max-w-[330px] sm:max-w-[420px] md:max-w-[560px] text-white">
-
-              {/* SMALL TAG */}
-              <p className="mb-3 text-[10px] font-semibold uppercase tracking-[0.28em] text-[#f5d1b8] sm:text-xs md:text-sm">
-                OUR RESPONSIBILITY
+          <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+            <div className="max-w-2xl">
+              <p className="text-[10px] font-semibold uppercase tracking-[0.3em] text-[#7a3e1d] sm:text-[11px]">
+                OUR IMPACT
               </p>
-
-              {/* HEADING */}
-              <h2 className="text-[38px] font-black uppercase leading-[0.92] tracking-[-0.05em] text-white sm:text-[54px] md:text-[72px]">
-                YOUR GOODS,
-                <br />
-                OUR
-                <br />
-                RESPONSIBILITY
+              <h2 className="mt-3 text-[28px] font-black uppercase leading-[0.92] tracking-[-0.05em] text-[#1f1f1f] sm:text-[36px] md:text-[42px]">
+                Premium logistics with measurable trust.
               </h2>
-
-              {/* DESCRIPTION */}
-              <p className="mt-4 text-[13px] leading-7 text-white/85 sm:text-[15px] md:mt-6 md:text-lg md:leading-9">
-                Fasttrack Logistics blends premium transport service,
-                secure operations, and luxury-class logistics care
-                to deliver freight safely across India with speed,
-                precision and reliability.
+              <p className="mt-3 text-sm leading-7 text-[#605551] sm:text-[15px]">
+                Every shipment is handled with a premium, dependable process built around speed, safety, and long-term client confidence.
               </p>
+            </div>
 
-              {/* BUTTON */}
-              <div className="mt-6 md:mt-8">
-                <Button
-                  variant="secondary"
-                  className="border-0 bg-white px-6 py-3 text-[11px] font-semibold tracking-[0.22em] text-[#1f1f1f] shadow-xl transition hover:bg-[#f3f3f3] sm:px-8 sm:text-sm"
-                >
-                  LEARN MORE
-                </Button>
-              </div>
-
+            <div className="inline-flex items-center gap-2 rounded-full border border-[#e8d4c7] bg-[#fffdfa] px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.2em] text-[#5c2d15]">
+              <Sparkles size={14} className="text-[#7a3e1d]" />
+              Premium performance
             </div>
           </div>
 
-          {/* BOTTOM FADE */}
-          <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-black/30 to-transparent" />
+          <motion.div
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.2 }}
+            variants={staggerIn}
+            className="mt-6 grid gap-4 sm:grid-cols-2 xl:grid-cols-4"
+          >
+            {impactItems.map((item) => {
+              const Icon = item.icon;
+
+              return (
+                <motion.div
+                  key={item.title}
+                  variants={fadeInUp}
+                  whileHover={{ y: -4, transition: { duration: 0.2 } }}
+                  className="group rounded-[1.5rem] border border-[#ead9cb] bg-white/90 p-4 shadow-[0_20px_40px_rgba(55,24,8,0.08)] transition"
+                >
+                  <div className={`inline-flex rounded-2xl bg-gradient-to-br ${item.accent} p-3 text-white shadow-[0_18px_30px_rgba(122,62,29,0.22)]`}>
+                    <Icon className="h-5 w-5" />
+                  </div>
+
+                  <p className="mt-4 text-[24px] font-black text-[#1f1f1f] sm:text-[26px]">
+                    <AnimatedValue value={item.value} suffix={item.suffix} />
+                  </p>
+
+                  <p className="mt-2 text-[15px] font-semibold text-[#1f1f1f]">
+                    {item.title}
+                  </p>
+
+                  <p className="mt-1 text-sm leading-6 text-[#6b6b6b]">
+                    {item.subtitle}
+                  </p>
+
+                  <div className="mt-4 flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-[#7a3e1d]">
+                    Premium delivery
+                    <ArrowRight className="h-3.5 w-3.5 transition group-hover:translate-x-1" />
+                  </div>
+                </motion.div>
+              );
+            })}
+          </motion.div>
         </motion.div>
       </div>
     </section>

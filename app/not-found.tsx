@@ -19,7 +19,7 @@ export default function NotFound() {
         {/* DESCRIPTION */}
         <p className="mx-auto mt-4 max-w-[500px] text-[14px] leading-7 text-[#d9c9b9] md:text-base md:leading-8">
           The page you are looking for does not exist.
-          Return to the premium Fasttrack Logistics experience.
+          Return to the premium DBMT Logistics experience.
         </p>
 
         {/* BUTTON */}

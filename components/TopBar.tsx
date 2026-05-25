@@ -12,13 +12,13 @@
 
 // const contacts = [
 //   {
-//     label: "6309635637",
-//     href: "tel:+6309635637",
+//     label: "9505984225",
+//     href: "tel:+919505984225",
 //     icon: Phone,
 //   },
 //   {
-//     label: "hello@fasttrack.com",
-//     href: "mailto:hello@fasttrack.com",
+//     label: "dbmtransport@gmail.com",
+//     href: "mailto:dbmtransport@gmail.com",
 //     icon: Mail,
 //   },
 // ];
@@ -26,22 +26,22 @@
 // const socials = [
 //   {
 //     label: "WhatsApp",
-//     href: "https://wa.me/6309635637",
+//     href: "https://wa.me/9505984225",
 //     icon: MessageSquare,
 //   },
 //   {
 //     label: "Instagram",
-//     href: "https://instagram.com/fasttrack_logistics",
+//     href: "#",
 //     icon: Instagram,
 //   },
 //   {
 //     label: "Facebook",
-//     href: "https://facebook.com/fasttracklogistics",
+//     href: "#",
 //     icon: Facebook,
 //   },
 //   {
 //     label: "LinkedIn",
-//     href: "https://linkedin.com/company/fasttrack-logistics",
+//     href: "#",
 //     icon: Linkedin,
 //   },
 // ];

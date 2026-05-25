@@ -2,15 +2,15 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Fasttrack Logistics | Premium Transport Solutions",
-  description: "Luxury logistics services across India — full truck load, part load, and goods transport with a cinematic premium experience.",
-  metadataBase: new URL("https://fasttrack.example.com"),
+  title: "DBMT | Durga Bhavani Manikanta Transports",
+  description: "Reliable freight and transport solutions across India with a premium, modern client experience.",
+  metadataBase: new URL("https://dbmt.example.com"),
   openGraph: {
-    title: "Fasttrack Logistics",
-    description: "Premium transport services for businesses across India.",
+    title: "DBMT | Durga Bhavani Manikanta Transports",
+    description: "Reliable freight and transport solutions across India.",
     type: "website",
-    locale: "en_IN"
-  }
+    locale: "en_IN",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
