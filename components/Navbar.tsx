@@ -1,11 +1,11 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/Button";
-import { LogoMark } from "@/components/LogoMark";
 
 const navItems = [
   { label: "HOME", href: "#home" },
@@ -41,14 +41,17 @@ export function Navbar() {
       >
         <div className="mx-auto flex h-[72px] max-w-[1400px] items-center justify-between px-4 sm:px-6 lg:h-[82px] lg:px-10">
           <Link href="#home" className="relative z-50 flex items-center gap-3">
-            <LogoMark size={36} className="shrink-0" />
+            <Image
+              src="/images/logo.jpg"
+              alt="DBM Logo"
+              width={40}
+              height={40}
+              className="shrink-0 rounded-lg"
+            />
             <div className="flex flex-col items-start leading-[0.95]">
               <h1 className="text-[16px] font-black uppercase tracking-[0.34em] text-white sm:text-[18px]">
-                DBMT
+                DBM
               </h1>
-              <p className="mt-[1px] text-[8px] uppercase tracking-[0.2em] text-[#f5eee8]/80 sm:text-[9px]">
-                Durga Bhavani Manikanta Transports
-              </p>
             </div>
           </Link>
 
@@ -108,14 +111,17 @@ export function Navbar() {
             >
               <div className="flex items-center justify-between gap-3">
                 <div className="flex items-center gap-3">
-                  <LogoMark size={34} className="shrink-0" />
+                  <Image
+                    src="/images/logo.jpg"
+                    alt="DBM Logo"
+                    width={40}
+                    height={40}
+                    className="shrink-0 rounded-lg"
+                  />
                   <div className="leading-[0.95]">
                     <h2 className="text-[15px] font-black uppercase tracking-[0.28em] text-white">
-                      DBMT
+                      DBM
                     </h2>
-                    <p className="mt-[2px] text-[8px] uppercase tracking-[0.18em] text-white/70">
-                      Durga Bhavani Manikanta Transports
-                    </p>
                   </div>
                 </div>
                 <button

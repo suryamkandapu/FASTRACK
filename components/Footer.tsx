@@ -1,6 +1,6 @@
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight, Facebook, Instagram, Linkedin, Mail, Phone } from "lucide-react";
-import { LogoMark } from "@/components/LogoMark";
 
 const quickLinks = [
   { label: "Home", href: "#home" },
@@ -22,12 +22,15 @@ export function Footer() {
         <div className="grid gap-6 lg:grid-cols-[1.1fr_0.7fr_0.7fr_1fr]">
           <div>
             <div className="flex items-center gap-3">
-              <LogoMark size={36} className="shrink-0" />
+              <Image
+                src="/images/logo.jpg"
+                alt="DBM Logo"
+                width={40}
+                height={40}
+                className="shrink-0 rounded-lg"
+              />
               <div className="leading-[0.95]">
-                <p className="text-[17px] font-black uppercase tracking-[0.35em] text-white">DBMT</p>
-                <p className="mt-[2px] text-[8px] uppercase tracking-[0.22em] text-[#f5eee8]/75">
-                  Durga Bhavani Manikanta Transports
-                </p>
+                <p className="text-[17px] font-black uppercase tracking-[0.35em] text-white">DBM</p>
               </div>
             </div>
 
