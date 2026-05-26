@@ -24,18 +24,18 @@ export function StatsContactSection() {
                 <h2 className="mt-2 max-w-[260px] text-[26px] font-black uppercase leading-[0.9] tracking-[-0.05em] text-white sm:text-[30px]">
                   Speak with the DBMT team.
                 </h2>
-                <p className="mt-3 max-w-[360px] text-sm leading-7 text-[#f5eee8]/82">
+                <p className="mt-3 max-w-[360px] text-sm font-normal leading-[1.8] text-[rgba(255,255,255,0.88)]">
                   For transport planning, quote requests, and urgent support, connect directly with our logistics team using the details below.
                 </p>
 
                 <div className="mt-4 grid gap-3 sm:grid-cols-2">
                   <div className="rounded-[1.1rem] border border-white/10 bg-white/5 px-3 py-3">
                     <p className="text-[10px] uppercase tracking-[0.2em] text-[#f5eee8]/75">Coverage</p>
-                    <p className="mt-2 text-sm leading-6 text-[#fffdfa]">Nationwide cargo support and regional coordination.</p>
+                    <p className="mt-2 text-sm font-normal leading-[1.8] text-[rgba(255,255,255,0.88)]">Nationwide cargo support and regional coordination.</p>
                   </div>
                   <div className="rounded-[1.1rem] border border-white/10 bg-white/5 px-3 py-3">
                     <p className="text-[10px] uppercase tracking-[0.2em] text-[#f5eee8]/75">Response</p>
-                    <p className="mt-2 text-sm leading-6 text-[#fffdfa]">Fast assistance for priority shipments and logistics queries.</p>
+                    <p className="mt-2 text-sm font-normal leading-[1.8] text-[rgba(255,255,255,0.88)]">Fast assistance for priority shipments and logistics queries.</p>
                   </div>
                 </div>
               </div>

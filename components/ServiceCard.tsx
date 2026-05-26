@@ -15,7 +15,7 @@ export function ServiceCard({
   const whatsappText = `Hello DBMT Logistics, I am interested in your ${title} service. Can you please share complete details, pricing and availability?`;
 
   const handleWhatsAppClick = () => {
-    const phoneNumber = "9505984225";
+    const phoneNumber = "919505984225";
     const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappText)}`;
     window.open(whatsappURL, "_blank");
   };

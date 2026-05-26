@@ -38,7 +38,7 @@ export function Footer() {
             <div className="mt-4 space-y-2 text-sm text-[#d8c4b8]">
               <a href="tel:+919505984225" className="flex items-center gap-3 transition hover:text-white">
                 <Phone className="h-4 w-4" />
-                9505984225
+                +91 95059 84225
               </a>
               <a href="mailto:dbmtransport@gmail.com" className="flex items-center gap-3 transition hover:text-white">
                 <Mail className="h-4 w-4" />
@@ -83,7 +83,7 @@ export function Footer() {
             </h3>
             <div className="mt-3 flex flex-wrap gap-3">
               <a
-                href="https://wa.me/9505984225"
+                href="https://wa.me/919505984225"
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/10 px-4 py-2 text-[12px] font-semibold uppercase tracking-[0.18em] text-white transition hover:border-[#f6d8c3]/70 hover:bg-white/15"

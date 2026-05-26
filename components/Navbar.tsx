@@ -147,7 +147,7 @@ export function Navbar() {
 
               <div className="mt-auto grid gap-3">
                 <a
-                  href="https://wa.me/9505984225"
+                  href="https://wa.me/919505984225"
                   target="_blank"
                   rel="noreferrer"
                   className="inline-flex h-11 items-center justify-center rounded-full bg-[#25d366] px-4 text-[11px] font-semibold uppercase tracking-[0.24em] text-white"
