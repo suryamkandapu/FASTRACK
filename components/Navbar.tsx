@@ -52,6 +52,9 @@ export function Navbar() {
               <h1 className="text-[16px] font-black uppercase tracking-[0.34em] text-white sm:text-[18px]">
                 DBM
               </h1>
+              <p className="mt-[1px] text-[8px] uppercase tracking-[0.2em] text-[#f5eee8]/80 sm:text-[9px]">
+                Durga Bavani Manikanta
+              </p>
             </div>
           </Link>
 
@@ -110,7 +113,7 @@ export function Navbar() {
               className="fixed right-0 top-0 z-50 flex h-screen w-[86%] max-w-[340px] flex-col bg-[#120907] p-6 shadow-[0_20px_60px_rgba(0,0,0,0.45)] lg:hidden"
             >
               <div className="flex items-center justify-between gap-3">
-                <div className="flex items-center gap-3">
+                  <div className="flex items-center gap-3">
                   <Image
                     src="/images/logo.jpg"
                     alt="DBM Logo"
@@ -122,6 +125,9 @@ export function Navbar() {
                     <h2 className="text-[15px] font-black uppercase tracking-[0.28em] text-white">
                       DBM
                     </h2>
+                    <p className="mt-[2px] text-[8px] uppercase tracking-[0.18em] text-white/70">
+                      Durga Bavani Manikanta
+                    </p>
                   </div>
                 </div>
                 <button

@@ -1,11 +1,25 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowUpRight, Play } from "lucide-react";
+import { VideoModal } from "@/components/VideoModal";
+
+// Collection of truck and transportation videos
+const TRUCK_VIDEOS = [
+  { id: "dQw4w9WgXcQ", title: "Premium Logistics in Motion" },
+  { id: "9bZkp7q19f0", title: "Modern Transportation Solutions" },
+  { id: "CsvF3CV4aaU", title: "Excellence in Freight Transport" },
+  { id: "2Xc2owATREg", title: "Global Logistics Network" },
+  { id: "o-YBDTqX_ZU", title: "Fast & Reliable Delivery" },
+];
 
 export function HeroSection() {
+  const [isVideoOpen, setIsVideoOpen] = useState(false);
+  const [selectedVideo] = useState(() => TRUCK_VIDEOS[Math.floor(Math.random() * TRUCK_VIDEOS.length)]);
+
   return (
     <section id="home" className="relative overflow-hidden">
       <div className="absolute inset-0">
@@ -65,8 +79,8 @@ export function HeroSection() {
             transition={{ delay: 0.24, duration: 0.7 }}
             className="mt-5 flex flex-wrap gap-3"
           >
-            <motion.a
-              href="#services"
+            <motion.button
+              onClick={() => setIsVideoOpen(true)}
               whileHover={{ y: -2, scale: 1.01 }}
               whileTap={{ scale: 0.98 }}
               className="inline-flex h-[50px] items-center justify-center gap-3 rounded-[1rem] bg-white px-4 text-[11px] font-semibold uppercase tracking-[0.16em] text-[#1f1f1f] shadow-[0_18px_40px_rgba(91,53,31,0.14)] transition sm:h-[56px] sm:px-6 sm:text-[12px]"
@@ -75,7 +89,7 @@ export function HeroSection() {
                 <Play size={14} className="ml-[1px]" />
               </span>
               Watch Video
-            </motion.a>
+            </motion.button>
 
             <Link
               href="#impact"
@@ -89,6 +103,13 @@ export function HeroSection() {
       </div>
 
       <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-[#f5eee8] to-transparent sm:h-20" />
+
+      <VideoModal
+        isOpen={isVideoOpen}
+        onClose={() => setIsVideoOpen(false)}
+        videoId={selectedVideo.id}
+        title={selectedVideo.title}
+      />
     </section>
   );
 }

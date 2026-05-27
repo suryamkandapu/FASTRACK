@@ -31,6 +31,9 @@ export function Footer() {
               />
               <div className="leading-[0.95]">
                 <p className="text-[17px] font-black uppercase tracking-[0.35em] text-white">DBM</p>
+                <p className="mt-[2px] text-[8px] uppercase tracking-[0.22em] text-[#f5eee8]/75">
+                  Durga Bavani Manikanta
+                </p>
               </div>
             </div>
 
@@ -110,9 +113,9 @@ export function Footer() {
               <Link href="#" className="rounded-full bg-white/10 p-3 transition hover:bg-white/15">
                 <Facebook className="h-4 w-4" />
               </Link>
-              <Link href="#" className="rounded-full bg-white/10 p-3 transition hover:bg-white/15">
+              <a href="https://www.instagram.com/dbmminitransport?igsh=OWVneWpteGZxdzY5" target="_blank" rel="noreferrer" className="rounded-full bg-white/10 p-3 transition hover:bg-white/15">
                 <Instagram className="h-4 w-4" />
-              </Link>
+              </a>
               <Link href="#" className="rounded-full bg-white/10 p-3 transition hover:bg-white/15">
                 <Linkedin className="h-4 w-4" />
               </Link>
