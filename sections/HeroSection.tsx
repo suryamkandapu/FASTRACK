@@ -21,7 +21,7 @@ export function HeroSection() {
   const [selectedVideo] = useState(() => TRUCK_VIDEOS[Math.floor(Math.random() * TRUCK_VIDEOS.length)]);
 
   return (
-    <section id="home" className="relative overflow-hidden">
+    <section id="home" className="relative overflow-hidden h-[74vh] sm:h-[72vh] lg:h-[76vh] xl:h-[78vh]">
       <Image
         src="/images/hero.png"
         alt="Premium logistics truck"
