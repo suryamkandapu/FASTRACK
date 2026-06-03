@@ -37,7 +37,7 @@ export function HeroSection() {
         <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.18),transparent_42%,rgba(255,255,255,0.14))]" />
       </div>
 
-      <div className="relative z-10 mx-auto flex min-h-[74vh] max-w-[1400px] items-center px-5 pb-12 pt-5 sm:min-h-[72vh] sm:px-6 lg:px-10">
+      <div className="relative z-10 mx-auto flex min-h-[74vh] max-w-[1400px] items-center px-5 pb-12 pt-5 sm:min-h-[72vh] sm:px-6 lg:min-h-[76vh] xl:min-h-[78vh] lg:px-10">
         <motion.div
           initial={{ opacity: 0, x: -28 }}
           animate={{ opacity: 1, x: 0 }}
