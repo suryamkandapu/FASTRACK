@@ -1,0 +1,99 @@
+{
+  "name": "DBM Transport",
+  "short_name": "DBM Transport",
+  "description": "DBM Transport — Premium Logistics & Transport Solutions",
+  "start_url": "https://www.dbmtransport.com",
+  "scope": "https://www.dbmtransport.com",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "theme_color": "#7a3e1d",
+  "background_color": "#f5eee8",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "16x16 32x32 48x48 64x64 96x96",
+      "type": "image/x-icon",
+      "purpose": "any"
+    },
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/logo-maskable.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshot-1.png",
+      "sizes": "540x720",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "DBMT homepage on mobile"
+    },
+    {
+      "src": "/screenshot-2.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "DBMT homepage on desktop"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Get Quote",
+      "short_name": "Quote",
+      "description": "Get a shipping quote quickly",
+      "url": "/quote?utm_source=pwa",
+      "icons": [
+        {
+          "src": "/icon-quote-96.png",
+          "sizes": "96x96",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Track Shipment",
+      "short_name": "Track",
+      "description": "Track your shipment in real-time",
+      "url": "/track?utm_source=pwa",
+      "icons": [
+        {
+          "src": "/icon-track-96.png",
+          "sizes": "96x96",
+          "type": "image/png"
+        }
+      ]
+    }
+  ],
+  "categories": ["business", "logistics", "transportation"],
+  "prefer_related_applications": false,
+  "share_target": {
+    "action": "/share",
+    "method": "POST",
+    "enctype": "application/x-www-form-urlencoded",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url"
+    }
+  }
+}

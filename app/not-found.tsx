@@ -1,4 +1,22 @@
 import { Button } from "@/components/Button";
+import { Metadata } from "next";
+import { generatePageMetadata } from "@/lib/seo";
+
+export const metadata: Metadata = generatePageMetadata({
+  title: "Page Not Found | DBM Transport",
+  description:
+    "The requested page does not exist. Return to DBM Transport for premium logistics, freight services, and cargo delivery across India.",
+  keywords: [
+    "DBM Transport",
+    "page not found",
+    "404 logistics",
+    "freight services India",
+    "cargo delivery service",
+  ],
+  canonical: "https://www.dbmtransport.com/404",
+  noindex: true,
+  nofollow: true,
+});
 
 export default function NotFound() {
   return (
