@@ -22,16 +22,16 @@ export function HeroSection() {
 
   return (
     <section id="home" className="relative overflow-hidden">
+      <Image
+        src="/images/hero.png"
+        alt="Premium logistics truck"
+        fill
+        priority
+        sizes="100vw"
+        quality={90}
+        className="absolute inset-0 object-cover object-center scale-[1.03] blur-[0.3px] brightness-[1.08] contrast-[1.02] saturate-[0.88]"
+      />
       <div className="absolute inset-0">
-        <Image
-          src="/images/hero.png"
-          alt="Premium logistics truck"
-          fill
-          priority
-          sizes="100vw"
-          quality={90}
-          className="object-cover object-center scale-[1.03] blur-[0.3px] brightness-[1.08] contrast-[1.02] saturate-[0.88]"
-        />
         <div className="absolute inset-0 bg-[linear-gradient(110deg,rgba(255,255,255,0.85),rgba(255,252,247,0.6),rgba(244,232,216,0.3),rgba(255,255,255,0.45))]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.9),transparent_24%),radial-gradient(circle_at_bottom_right,rgba(245,234,220,0.42),transparent_30%)]" />
         <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.18),transparent_42%,rgba(255,255,255,0.14))]" />

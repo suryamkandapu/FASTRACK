@@ -84,7 +84,7 @@ export function StatsContactSection() {
               </a>
 
               <a
-                href="mailto:dbmtransport@gmail.com"
+                href="mailto:dbmminitransport@gmail.com"
                 className="group flex items-center justify-between rounded-[1.15rem] border border-[#ead9cb] bg-[#faf6f1] p-3 transition hover:-translate-y-0.5 hover:border-[#7a3e1d] hover:bg-white"
               >
                 <div className="flex items-center gap-3">
@@ -93,7 +93,7 @@ export function StatsContactSection() {
                   </div>
                   <div>
                     <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-[#7a3e1d]">Email</p>
-                    <p className="mt-1 text-[16px] font-semibold text-[#1f1f1f]">dbmtransport@gmail.com</p>
+                    <p className="mt-1 text-[16px] font-semibold text-[#1f1f1f]">dbmminitransport@gmail.com</p>
                     <p className="mt-1 text-sm text-[#6b6b6b]">Quick response for quotes and assistance</p>
                   </div>
                 </div>

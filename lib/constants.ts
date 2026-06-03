@@ -36,7 +36,7 @@ export const SITE_CONSTANTS = {
   },
   
   contact: {
-    email: "info@dbmtransport.com",
+    email: "dbmminitransport@gmail.com",
     phone: "+91-95059-84225",
     whatsapp: "+91-95059-84225",
   },

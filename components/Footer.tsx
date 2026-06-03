@@ -46,9 +46,9 @@ export function Footer() {
                 <Phone className="h-4 w-4" />
                 +91 95059 84225
               </a>
-              <a href="mailto:dbmtransport@gmail.com" className="flex items-center gap-3 transition hover:text-white">
+              <a href="mailto:dbmminitransport@gmail.com" className="flex items-center gap-3 transition hover:text-white">
                 <Mail className="h-4 w-4" />
-                dbmtransport@gmail.com
+                dbmminitransport@gmail.com
               </a>
             </div>
           </div>
