@@ -8,6 +8,8 @@ import { AboutSection } from "@/sections/AboutSection";
 import { HeroSection } from "@/sections/HeroSection";
 import { QuoteFormSection } from "@/sections/QuoteFormSection";
 import { ServicesSection } from "@/sections/ServicesSection";
+import { AboutFounderSection } from "@/sections/Aboutfoundersection "
+
 import { StatsContactSection } from "@/sections/StatsContactSection";
 import { generatePageMetadata } from "@/lib/seo";
 import {
@@ -75,6 +77,11 @@ export default function Home() {
         */}
         <section>
           <ServicesSection />
+        </section>
+           <AboutFounderSection/>
+
+        <section>
+
         </section>
 
         {/* Quote/CTA Section */}
