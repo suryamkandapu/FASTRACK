@@ -78,10 +78,10 @@ export default function Home() {
         <section>
           <ServicesSection />
         </section>
-           <AboutFounderSection/>
+           
 
         <section>
-
+            <AboutFounderSection/>
         </section>
 
         {/* Quote/CTA Section */}
