@@ -80,22 +80,22 @@ export default function Home() {
         </section>
            
 
-        <section>
+        <section className="mb-10">
             <AboutFounderSection/>
         </section>
 
         {/* Quote/CTA Section */}
-        <section>
+        <section className="mt-10">
           <QuoteFormSection />
         </section>
 
         {/* About Section */}
-        <section>
+        <section className="mt-8">
           <AboutSection />
         </section>
 
         {/* Stats & Contact Section */}
-        <section>
+        <section className="mt-8">
           <StatsContactSection />
         </section>
       </main>
